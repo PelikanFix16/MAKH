@@ -1,9 +1,13 @@
-import React from "react";
+import { createAppContainer } from "react-navigation";
+import { createStackNavigator } from "react-navigation-stack";
+import HomeScreen from "./Components/HomeScreen";
+import ProfileScreen from "./Components/ProfileScreen";
 
-import MapView from "react-native-maps";
+const MainNavigator = createStackNavigator({
+  Home: { screen: HomeScreen },
+  Profile: { screen: ProfileScreen }
+});
 
-function App() {
-  return <MapView style={{ flex: 1 }} />;
-}
+const App = createAppContainer(MainNavigator);
 
 export default App;

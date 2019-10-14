@@ -3,31 +3,32 @@ module.exports = {
   env: {
     browser: true,
     jest: true,
-    es6: true,
+    es6: true
   },
-  plugins: ['import'],
+  plugins: ["import"],
   extends: [
-    'airbnb',
-    'prettier',
-    'prettier/react',
-    'plugin:prettier/recommended',
-    'eslint-config-prettier',
+    "airbnb",
+    "prettier",
+    "prettier/react",
+    "plugin:prettier/recommended",
+    "eslint-config-prettier"
   ],
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module',
+    sourceType: "module"
   },
   rules: {
-    'no-console': 'warn',
-    'no-eval': 'error',
-    'import/first': 'error',
-    'react/jsx-filename-extension': [
+    "no-console": "warn",
+    "no-eval": "error",
+    "import/first": "error",
+    "lines-between-class-members": ["error", "always"],
+    "react/jsx-filename-extension": [
       1,
       {
-        extensions: ['.js', '.jsx'],
-      },
+        extensions: [".js", ".jsx"]
+      }
     ],
-    'no-use-before-define': 0,
+    "no-use-before-define": 0
   },
-  parser: 'babel-eslint',
+  parser: "babel-eslint"
 };
