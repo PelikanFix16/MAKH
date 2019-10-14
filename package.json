@@ -15,7 +15,8 @@
     "react-native-gesture-handler": "^1.4.1",
     "react-native-maps": "^0.26.1",
     "react-navigation": "^4.0.10",
-    "react-navigation-stack": "^1.9.4"
+    "react-navigation-stack": "^1.9.4",
+    "ws": "^7.1.2"
   },
   "devDependencies": {
     "@babel/core": "7.6.4",
