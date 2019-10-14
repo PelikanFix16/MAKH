@@ -1,12 +1,9 @@
 import React from "react";
-import { Text, View } from "react-native";
+
+import MapView from "react-native-maps";
 
 function App() {
-  return (
-    <View>
-      <Text>Hello worold</Text>
-    </View>
-  );
+  return <MapView style={{ flex: 1 }} />;
 }
 
 export default App;
