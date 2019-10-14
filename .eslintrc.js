@@ -1,4 +1,33 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  env: {
+    browser: true,
+    jest: true,
+    es6: true,
+  },
+  plugins: ['import'],
+  extends: [
+    'airbnb',
+    'prettier',
+    'prettier/react',
+    'plugin:prettier/recommended',
+    'eslint-config-prettier',
+  ],
+  parserOptions: {
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  rules: {
+    'no-console': 'warn',
+    'no-eval': 'error',
+    'import/first': 'error',
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
+    'no-use-before-define': 0,
+  },
+  parser: 'babel-eslint',
 };
