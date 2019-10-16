@@ -1,0 +1,51 @@
+{
+    "type":"Collection",
+    "shops":[
+        {
+            "id":"1",
+            "name":"MCDonald's",
+            "Location":"Półwiejska 2a",
+            "Geolocation":{
+                "Latitude":"52.401757",
+                "Longitude":"16.928847"
+            }
+
+        },
+        {
+            "id":"2",
+            "name":"MCDonald's",
+            "Location":"Dąbrowskiego 38",
+            "Geolocation":{
+                "Latitude":"50.292496",
+                "Longitude":"18.950187"
+            }
+        },
+        {
+            "id":"3",
+            "name":"MCDonald's",
+            "Location":"Półwiejska 42",
+            "Geolocation":{
+                "Latitude":"52.401434",
+                "Longitude":"16.927863"
+            }
+        },
+        {
+            "id":"4",
+            "name":"MCDonald's",
+            "Location":"Aleje Solidarności 57",
+            "Geolocation":{
+                "Latitude":"51.258299",
+                "Longitude":"22.501637"
+            }
+        },
+        {
+            "id":"5",
+            "name":"MCDonald's",
+            "Location":"Głogowska 15",
+            "Geolocation":{
+                "Latitude":"50.032548",
+                "Longitude":"19.944365"
+            }
+        }
+    ]
+}
