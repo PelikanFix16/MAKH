@@ -4,7 +4,6 @@ import ShopData from "../../API/Fake/ShopData.json";
 import ButtonLocation from "./Button";
 import Location from "../../Helper/Location";
 import LoadGeometryDistance from "../../API/Requests/Geometry";
-import { Text } from "react-native";
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -44,7 +43,9 @@ class HomeScreen extends React.Component {
           name: place.name,
           location: place.Location,
           data,
-          id: place.id
+          id: place.id,
+          coords: myCoords,
+          shopLocation
         };
       })
     );
@@ -57,9 +58,19 @@ class HomeScreen extends React.Component {
 
     return preparedData.map((place) => {
       return (
-        <Text key={place.id}>
-          {place.name}:{place.data.distance}
-        </Text>
+        <ButtonLocation
+          name={place.name}
+          location={place.location}
+          distance={parseFloat((place.data.distance / 1000).toFixed(2))}
+          loadNavigate={() => {
+            navigation.navigate("Profile", {
+              geolocation: place.coords,
+              geometry: place.data.geometry,
+              shopLocation: place.shopLocation
+            });
+          }}
+          key={place.id}
+        />
       );
     });
   }
